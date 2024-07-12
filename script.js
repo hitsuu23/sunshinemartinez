@@ -30,4 +30,7 @@ function onPlayerReady(event) {
 }
 
 function onPlayerStateChange(event) {
-   
+    if (event.data === YT.PlayerState.ENDED) {
+        player.seekTo(getRandomStartTime());
+    }
+}
