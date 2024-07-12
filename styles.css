@@ -44,15 +44,17 @@ nav ul li {
     margin: 0 15px;
 }
 
-.potion {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.potion:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 main {
