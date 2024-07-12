@@ -20,6 +20,12 @@ body, html {
     background: black;
 }
 
+#background-video iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
 .overlay {
     position: relative;
     z-index: 1;
@@ -110,33 +116,4 @@ footer {
     padding: 1em;
     position: relative;
     z-index: 100;
-}
-
-/* Shooting star animation */
-.shooting-star {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 2px;
-    background: white;
-    opacity: 0.8;
-    box-shadow: 0 0 6px 2px white;
-    animation: shoot 20s linear infinite;
-}
-
-.shooting-star:nth-child(1) { top: 20%; left: 80%; animation-duration: 15s; animation-delay: -5s; }
-.shooting-star:nth-child(2) { top: 40%; left: 10%; animation-duration: 25s; animation-delay: -10s; }
-.shooting-star:nth-child(3) { top: 70%; left: 50%; animation-duration: 20s; animation-delay: -15s; }
-.shooting-star:nth-child(4) { top: 90%; left: 70%; animation-duration: 30s; animation-delay: -20s; }
-.shooting-star:nth-child(5) { top: 30%; left: 40%; animation-duration: 18s; animation-delay: -25s; }
-.shooting-star:nth-child(6) { top: 60%; left: 90%; animation-duration: 22s; animation-delay: -30s; }
-.shooting-star:nth-child(7) { top: 10%; left: 30%; animation-duration: 26s; animation-delay: -35s; }
-.shooting-star:nth-child(8) { top: 80%; left: 20%; animation-duration: 17s; animation-delay: -40s; }
-.shooting-star:nth-child(9) { top: 50%; left: 60%; animation-duration: 27s; animation-delay: -45s; }
-.shooting-star:nth-child(10) { top: 15%; left: 70%; animation-duration: 19s; animation-delay: -50s; }
-
-@keyframes shoot {
-    0% { transform: translateY(0) translateX(0); opacity: 1; }
-    100% { transform: translateY(-600px) translateX(600px); opacity: 0; }
 }
