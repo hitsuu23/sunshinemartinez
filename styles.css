@@ -6,7 +6,6 @@ body, html {
     color: #fff;
     overflow-y: auto; /* Ensure the content is scrollable */
     background: #000;
-    background: linear-gradient(135deg, #000, #200);
 }
 
 #background-video-container {
