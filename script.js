@@ -34,4 +34,3 @@ function onPlayerStateChange(event) {
         player.seekTo(getRandomStartTime());
     }
 }
- 
