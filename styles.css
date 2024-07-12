@@ -38,29 +38,31 @@ body, html {
     justify-content: center;
     min-height: 100vh;
     text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Adjusted overlay background for better visibility */
 }
 
 header {
     color: white;
-    padding: 2em 0;
+    padding: 1em 0; /* Reduced padding */
+    margin: 0; /* Removed margin */
 }
 
 header h1 {
-    margin: 0;
-    font-family: 'Cinzel', serif;
+    margin: 0.5em 0; /* Reduced margin */
+    font-family: 'Uncial Antiqua', serif;
     font-size: 3em;
     color: #ff00ff; /* Purple for emphasis */
 }
 
 header h2 {
-    margin: 0;
-    font-family: 'Cinzel', serif;
+    margin: 0.5em 0; /* Reduced margin */
+    font-family: 'Uncial Antiqua', serif;
     font-size: 1.5em;
     color: #ff00ff; /* Purple for emphasis */
 }
 
 nav {
-    margin: 2em 0;
+    margin: 1em 0; /* Reduced margin */
 }
 
 nav ul {
