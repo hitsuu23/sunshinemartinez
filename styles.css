@@ -141,7 +141,7 @@ footer {
         transform: translate(0, 0);
         opacity: 1;
     }
-    100% {
+     100% {
         transform: translate(1000px, 1000px);
         opacity: 0;
     }
