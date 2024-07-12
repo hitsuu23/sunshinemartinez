@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto:wght@400;700&display=swap');
 
-body {
+html, body {
     font-family: 'Roboto', sans-serif;
     background: url('2440062-bigthumbnail.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-attachment: fixed; /* Ensure the background stays fixed */
     color: #f3f3f3;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent unwanted scrolling */
 }
 
 body::before {
@@ -74,6 +76,8 @@ nav ul li a:hover {
 
 main {
     padding: 20px 10px;
+    overflow-y: auto; /* Allow vertical scrolling within main */
+    height: calc(100vh - 80px); /* Adjust height based on header and footer */
 }
 
 .section {
