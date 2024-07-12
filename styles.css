@@ -2,15 +2,16 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
-    color: #333;
+    background: url('starry-sky.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f3f3f3;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
 header {
-    background: linear-gradient(to right, #6a1b9a, #8e24aa);
+    background: rgba(0, 0, 0, 0.8);
     text-align: center;
     padding: 20px 0;
     position: sticky;
@@ -27,7 +28,7 @@ header h1 {
 }
 
 header h2 {
-    color: #f3e5f5;
+    color: #d1c4e9;
     font-size: 1.2em;
     margin-top: 5px;
 }
@@ -59,15 +60,14 @@ nav ul li a:hover {
 
 main {
     padding: 40px 20px;
-    background: #f9f9f9;
 }
 
 .section {
     margin: 30px 0;
-    background: #ffffff;
+    background: rgba(0, 0, 0, 0.7);
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     display: none;
 }
 
@@ -93,7 +93,7 @@ main {
 }
 
 h2 {
-    color: #6a1b9a;
+    color: #ffab91;
     font-family: 'Cinzel', serif;
     font-size: 2em;
     margin-bottom: 20px;
@@ -101,7 +101,7 @@ h2 {
 
 p, ul {
     font-size: 1.1em;
-    color: #555;
+    color: #eeeeee;
 }
 
 ul {
@@ -114,7 +114,7 @@ ul li {
 }
 
 footer {
-    background: #6a1b9a;
+    background: rgba(0, 0, 0, 0.8);
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
