@@ -1,64 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clients - Sunshine Martinez</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="background-video"></div>
-    <div class="overlay">
-        <header>
-            <h1>Sunshine Martinez</h1>
-            <h2>Clients</h2>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Profile</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="clients.html">Clients</a></li>
-            </ul>
-        </nav>
-        <main>
-            <section id="clients" class="section">
-                <div class="content">
-                    <h2>Clients</h2>
-                    <div class="instagram-posts">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cu5WwBbvb0M/" data-instgrm-version="12"></blockquote>
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CvlJNCmvjKS/" data-instgrm-version="12"></blockquote>
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cvu_d9oPM_l/" data-instgrm-version="12"></blockquote>
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CyRDPsrxrpg/" data-instgrm-version="12"></blockquote>
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C2JOX2dRhqP/" data-instgrm-version="12"></blockquote>
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C2Gz6E5Ntx-/" data-instgrm-version="12"></blockquote>
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C3wiR1Pr5u0/" data-instgrm-version="12"></blockquote>
-                    </div>
-                    <script async src="//www.instagram.com/embed.js"></script>
-                </div>
-            </section>
-        </main>
-    </div>
-    <footer>
-        <p>&copy; 2024 Sunshine Martinez. All rights reserved.</p>
-    </footer>
-    <!-- Add shooting stars -->
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
+/* General styling */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    overflow-y: auto; /* Ensure the content is scrollable */
+    background: #1b2735;
+    background: linear-gradient(135deg, #0b0d15, #1b2735);
+}
 
-    <!-- YouTube API -->
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="script.js"></script>
-</body>
-</html>
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: black;
+}
+
+.overlay {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    color: white;
+    padding: 2em 0;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-size: 3em;
+}
+
+header h2 {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+}
+
+nav {
+    margin: 2em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2em;
+    border-radius: 10px;
+    margin: 1em 0;
+    width: 80%;
+    color: white;
+}
+
+h2 {
+    color: #ff8c00;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    z-index: 100;
+}
+
+/* Shooting star animation */
+.shooting-star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: white;
+    opacity: 0.8;
+    box-shadow: 0 0 6px 2px white;
+    animation: shoot 20s linear infinite;
+}
+
+.shooting-star:nth-child(1) { top: 20%; left: 80%; animation-duration: 15s; animation-delay: -5s; }
+.shooting-star:nth-child(2) { top: 40%; left: 10%; animation-duration: 25s; animation-delay: -10s; }
+.shooting-star:nth-child(3) { top: 70%; left: 50%; animation-duration: 20s; animation-delay: -15s; }
+.shooting-star:nth-child(4) { top: 90%; left: 70%; animation-duration: 30s; animation-delay: -20s; }
+.shooting-star:nth-child(5) { top: 30%; left: 40%; animation-duration: 18s; animation-delay: -25s; }
+.shooting-star:nth-child(6) { top: 60%; left: 90%; animation-duration: 22s; animation-delay: -30s; }
+.shooting-star:nth-child(7) { top: 10%; left: 30%; animation-duration: 26s; animation-delay: -35s; }
+.shooting-star:nth-child(8) { top: 80%; left: 20%; animation-duration: 17s; animation-delay: -40s; }
+.shooting-star:nth-child(9) { top: 50%; left: 60%; animation-duration: 27s; animation-delay: -45s; }
+.shooting-star:nth-child(10) { top: 15%; left: 70%; animation-duration: 19s; animation-delay: -50s; }
+
+@keyframes shoot {
+    0% { transform: translateY(0) translateX(0); opacity: 1; }
+    100% { transform: translateY(-600px) translateX(600px); opacity: 0; }
+}
