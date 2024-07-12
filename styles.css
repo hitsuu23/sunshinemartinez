@@ -19,12 +19,16 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
+header h1, header h2 {
     color: #e0aaff;
     font-family: 'Cinzel', serif;
-    font-size: 2em;
     margin: 0;
     text-shadow: 0 0 10px #e0aaff;
+}
+
+header h2 {
+    font-size: 1.2em;
+    margin-top: 5px;
 }
 
 nav ul {
@@ -63,41 +67,19 @@ section {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
+    display: none; /* Initially hide all sections */
 }
 
-section:before {
-    content: '';
+.potion-content {
     position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 100px;
-    height: 100px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    animation: magic 10s linear infinite;
-    z-index: 0;
-}
-
-section:after {
-    content: '';
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 100px;
-    height: 100px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    animation: magic 10s linear infinite reverse;
-    z-index: 0;
-}
-
-@keyframes magic {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(200px, 200px);
-    }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 section h2 {
@@ -123,44 +105,6 @@ section ul li {
     margin: 10px 0;
 }
 
-form {
-    max-width: 300px;
-    margin: 0 auto;
-    z-index: 1;
-    position: relative;
-}
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #1d1d1d;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #e0aaff;
-    border: none;
-    color: #1d1d1d;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
-}
-
-button:hover {
-    background-color: #d19fe8;
-}
-
 footer {
     background-color: #1a1a1a;
     text-align: center;
@@ -172,4 +116,9 @@ footer p {
     margin: 0;
     font-size: 0.9em;
     color: #e0aaff;
+}
+
+/* Show the section when a potion is clicked */
+:target {
+    display: block;
 }
