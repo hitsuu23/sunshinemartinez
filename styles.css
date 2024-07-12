@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #0a0a0a;
+    background: linear-gradient(to bottom right, #000000, #1a1a1a);
     color: #ffffff;
     margin: 0;
     padding: 0;
@@ -10,20 +10,20 @@ body {
 }
 
 header {
-    background-color: #1a1a1a;
+    background: linear-gradient(to right, #4a148c, #880e4f);
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 header h1, header h2 {
-    color: #e0aaff;
+    color: #fff59d;
     font-family: 'Cinzel', serif;
     margin: 0;
-    text-shadow: 0 0 10px #e0aaff;
+    text-shadow: 0 0 10px #ffeb3b;
 }
 
 header h2 {
@@ -40,13 +40,14 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .potion {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px #ffeb3b);
 }
 
 @keyframes float {
@@ -54,17 +55,17 @@ nav ul li {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-15px);
     }
 }
 
 section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
-    background: rgba(26, 26, 26, 0.8);
-    margin: 20px 10px;
+    background: rgba(58, 58, 58, 0.9);
+    margin: 30px 20px;
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
     display: none; /* Initially hide all sections */
@@ -75,25 +76,38 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    animation: reveal 1s ease-out forwards;
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
 }
 
 section h2 {
-    color: #e0aaff;
+    color: #fff59d;
     font-family: 'Cinzel', serif;
-    font-size: 1.8em;
+    font-size: 2em;
     margin-bottom: 20px;
-    text-shadow: 0 0 5px #e0aaff;
+    text-shadow: 0 0 5px #ffeb3b;
 }
 
 section p, section ul {
-    font-size: 1.1em;
+    font-size: 1.2em;
     z-index: 1;
     position: relative;
+    color: #e0e0e0;
 }
 
 section ul {
@@ -102,20 +116,21 @@ section ul {
 }
 
 section ul li {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 footer {
-    background-color: #1a1a1a;
+    background-color: #4a148c;
     text-align: center;
     padding: 20px 0;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.4);
 }
 
 footer p {
     margin: 0;
-    font-size: 0.9em;
-    color: #e0aaff;
+    font-size: 1em;
+    color: #ffeb3b;
+    text-shadow: 0 0 5px #ffeb3b;
 }
 
 /* Show the section when a potion is clicked */
